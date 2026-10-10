@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>健康百科｜口腔溃疡陪伴式康复系统</title>
+  <meta name="description" content="口腔溃疡科普百科：按病因、护理、饮食分类筛选，并链接到详细文章。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="wiki">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">愈</span>愈口 21天陪伴</a>
+      <button class="nav-toggle" type="button" aria-expanded="false">菜单</button>
+      <nav class="site-nav">
+        <a href="index.html" data-nav="home">首页</a>
+        <a href="plan.html" data-nav="plan">21天计划</a>
+        <a href="self-check.html" data-nav="check">自查</a>
+        <a href="tracker.html" data-nav="tracker">日记</a>
+        <a href="report.html" data-nav="report">周报</a>
+        <a href="wiki.html" data-nav="wiki">百科</a>
+        <a href="diet.html" data-nav="diet">饮食</a>
+        <a href="community.html" data-nav="community">社区</a>
+        <a href="about.html" data-nav="about">关于</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container page-head">
+      <h1>口腔溃疡百科</h1>
+      <p class="lead">按分类浏览，点进文章看完整说明。</p>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="filters" id="wiki-filters">
+          <button class="chip active" data-cat="all" type="button">全部</button>
+          <button class="chip" data-cat="cause" type="button">病因</button>
+          <button class="chip" data-cat="care" type="button">护理</button>
+          <button class="chip" data-cat="diet" type="button">饮食</button>
+          <button class="chip" data-cat="prevent" type="button">预防</button>
+        </div>
+        <div id="wiki-list">
+          <article class="wiki-item" data-cat="cause">
+            <span class="badge">病因</span>
+            <h3>口腔溃疡为什么反复发作</h3>
+            <p>局部摩擦、免疫状态、睡眠债和压力常同时出现。</p>
+            <a href="articles/article-1.html">阅读文章</a>
+          </article>
+          <article class="wiki-item" data-cat="care">
+            <span class="badge">护理</span>
+            <h3>21天护理节奏怎么安排</h3>
+            <p>先减刺激，再补睡眠与营养，最后把习惯留下。</p>
+            <a href="articles/article-2.html">阅读文章</a>
+          </article>
+          <article class="wiki-item" data-cat="diet">
+            <span class="badge">饮食</span>
+            <h3>吃什么、避什么</h3>
+            <p>温软清淡优先，酸辣烫硬尽量避开。</p>
+            <a href="articles/article-3.html">阅读文章</a>
+            <p><a href="diet.html">打开饮食检索</a></p>
+          </article>
+          <article class="wiki-item" data-cat="prevent">
+            <span class="badge">预防</span>
+            <h3>降低复发的日常动作</h3>
+            <p>固定睡眠、减少咬唇咬颊、少熬夜、压力有出口。可配合<a href="plan.html">21天计划</a>把动作变成打卡。</p>
+          </article>
+          <article class="wiki-item" data-cat="care">
+            <span class="badge">护理</span>
+            <h3>什么时候应该就医</h3>
+            <p>溃疡超过两周、反复高发、伴随发热或体重下降时，请到口腔科评估。可先做<a href="self-check.html">症状自查</a>作为提醒，不要把它当成诊断。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> 口腔溃疡21天陪伴式康复系统</p>
+      <p><a href="about.html">关于本站</a> · <a href="wiki.html">健康百科</a> · <a href="plan.html">康复计划</a></p>
+      <p class="disclaimer">本站内容仅供健康科普参考，不能替代专业医疗诊断。如有严重症状或持续不愈，请及时就医。</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("wiki-filters").addEventListener("click", function (event) {
+      var btn = event.target.closest(".chip");
+      if (!btn) return;
+      document.querySelectorAll("#wiki-filters .chip").forEach(function (el) { el.classList.remove("active"); });
+      btn.classList.add("active");
+      var cat = btn.getAttribute("data-cat");
+      document.querySelectorAll("#wiki-list .wiki-item").forEach(function (item) {
+        item.style.display = cat === "all" || item.getAttribute("data-cat") === cat ? "" : "none";
+      });
+    });
+  </script>
+</body>
+</html>

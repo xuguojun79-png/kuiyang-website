@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>饮食参考｜口腔溃疡陪伴式康复系统</title>
+  <meta name="description" content="口腔溃疡饮食参考：推荐、慎吃、忌口三类食物，支持关键词搜索。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="diet">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">愈</span>愈口 21天陪伴</a>
+      <button class="nav-toggle" type="button" aria-expanded="false">菜单</button>
+      <nav class="site-nav">
+        <a href="index.html" data-nav="home">首页</a>
+        <a href="plan.html" data-nav="plan">21天计划</a>
+        <a href="self-check.html" data-nav="check">自查</a>
+        <a href="tracker.html" data-nav="tracker">日记</a>
+        <a href="report.html" data-nav="report">周报</a>
+        <a href="wiki.html" data-nav="wiki">百科</a>
+        <a href="diet.html" data-nav="diet">饮食</a>
+        <a href="community.html" data-nav="community">社区</a>
+        <a href="about.html" data-nav="about">关于</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container page-head">
+      <h1>饮食参考</h1>
+      <p class="lead">个体差异很大。过敏、慢性病或医嘱饮食请遵医生意见。详细说明见<a href="articles/article-3.html">饮食文章</a>。</p>
+    </div>
+    <section class="section">
+      <div class="container">
+        <input class="search-box" id="food-search" type="search" placeholder="搜索食物，例如：粥、柠檬、坚果">
+        <div class="filters" id="food-filters">
+          <button class="chip active" data-cat="all" type="button">全部</button>
+          <button class="chip" data-cat="good" type="button">推荐</button>
+          <button class="chip" data-cat="caution" type="button">慎吃</button>
+          <button class="chip" data-cat="avoid" type="button">忌口</button>
+        </div>
+        <div id="food-list">
+          <article class="food-item" data-cat="good" data-name="南瓜粥 米粥 蒸蛋 豆腐">
+            <span class="badge">推荐</span>
+            <h3>南瓜粥 / 白粥 / 蒸蛋</h3>
+            <p>温热软烂，摩擦小，适合疼痛明显的几天。</p>
+          </article>
+          <article class="food-item" data-cat="good" data-name="豆腐 豆浆 嫩豆腐">
+            <span class="badge">推荐</span>
+            <h3>嫩豆腐与温豆浆</h3>
+            <p>质地软、易咀嚼，可补充部分蛋白。</p>
+          </article>
+          <article class="food-item" data-cat="good" data-name="香蕉 木瓜 蒸南瓜">
+            <span class="badge">推荐</span>
+            <h3>香蕉、木瓜、蒸南瓜</h3>
+            <p>通常酸度较低，熟软后更友好。</p>
+          </article>
+          <article class="food-item" data-cat="good" data-name="鲈鱼 鳕鱼 鸡蛋羹">
+            <span class="badge">推荐</span>
+            <h3>清蒸鱼与鸡蛋羹</h3>
+            <p>少油少盐，避免煎炸焦糊。</p>
+          </article>
+          <article class="food-item" data-cat="caution" data-name="酸奶 柑橘 番茄">
+            <span class="badge">慎吃</span>
+            <h3>酸奶、柑橘、番茄</h3>
+            <p>有一定酸度，部分人会刺痛。可少量试探。</p>
+          </article>
+          <article class="food-item" data-cat="caution" data-name="坚果 烤面包 饼干">
+            <span class="badge">慎吃</span>
+            <h3>坚果、烤面包、硬饼干</h3>
+            <p>边缘锐利，容易摩擦溃疡面。</p>
+          </article>
+          <article class="food-item" data-cat="caution" data-name="咖啡 浓茶">
+            <span class="badge">慎吃</span>
+            <h3>咖啡与浓茶</h3>
+            <p>可能影响睡眠，溃疡期优先保证休息。</p>
+          </article>
+          <article class="food-item" data-cat="avoid" data-name="辣椒 火锅 烧烤 酸菜">
+            <span class="badge">忌口</span>
+            <h3>辣椒、火锅、烧烤</h3>
+            <p>热、辣、刺激强，容易加重疼痛。</p>
+          </article>
+          <article class="food-item" data-cat="avoid" data-name="柠檬 醋 碳酸饮料">
+            <span class="badge">忌口</span>
+            <h3>柠檬、醋、碳酸饮料</h3>
+            <p>高酸或气泡刺激黏膜。</p>
+          </article>
+          <article class="food-item" data-cat="avoid" data-name="烟 酒 槟榔">
+            <span class="badge">忌口</span>
+            <h3>烟、酒、槟榔</h3>
+            <p>明显刺激口腔黏膜，也不利于愈合。</p>
+          </article>
+        </div>
+        <p id="food-empty" class="empty hidden">没有匹配的食物，试试其他关键词。</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> 口腔溃疡21天陪伴式康复系统</p>
+      <p><a href="about.html">关于本站</a> · <a href="wiki.html">健康百科</a> · <a href="plan.html">康复计划</a></p>
+      <p class="disclaimer">本站内容仅供健康科普参考，不能替代专业医疗诊断。如有严重症状或持续不愈，请及时就医。</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    var cat = "all";
+    var search = "";
+    function applyFoodFilter() {
+      var visible = 0;
+      document.querySelectorAll(".food-item").forEach(function (item) {
+        var matchCat = cat === "all" || item.getAttribute("data-cat") === cat;
+        var matchText = (item.getAttribute("data-name") + item.textContent).toLowerCase().indexOf(search) !== -1;
+        var show = matchCat && matchText;
+        item.style.display = show ? "" : "none";
+        if (show) visible += 1;
+      });
+      document.getElementById("food-empty").classList.toggle("hidden", visible > 0);
+    }
+    document.getElementById("food-search").addEventListener("input", onSearch);
+    document.getElementById("food-search").addEventListener("change", onSearch);
+    function onSearch(e) {
+      search = e.target.value.trim().toLowerCase();
+      applyFoodFilter();
+    }
+    document.getElementById("food-filters").addEventListener("click", function (event) {
+      var btn = event.target.closest(".chip");
+      if (!btn) return;
+      document.querySelectorAll("#food-filters .chip").forEach(function (el) { el.classList.remove("active"); });
+      btn.classList.add("active");
+      cat = btn.getAttribute("data-cat");
+      applyFoodFilter();
+    });
+  </script>
+</body>
+</html>

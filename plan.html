@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>21天计划｜口腔溃疡陪伴式康复系统</title>
+  <meta name="description" content="21天口腔溃疡护理计划，分为缓解、修复、巩固三个阶段。每日任务可用浏览器本地存储记录进度。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="plan">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">愈</span>愈口 21天陪伴</a>
+      <button class="nav-toggle" type="button" aria-expanded="false">菜单</button>
+      <nav class="site-nav">
+        <a href="index.html" data-nav="home">首页</a>
+        <a href="plan.html" data-nav="plan">21天计划</a>
+        <a href="self-check.html" data-nav="check">自查</a>
+        <a href="tracker.html" data-nav="tracker">日记</a>
+        <a href="report.html" data-nav="report">周报</a>
+        <a href="wiki.html" data-nav="wiki">百科</a>
+        <a href="diet.html" data-nav="diet">饮食</a>
+        <a href="community.html" data-nav="community">社区</a>
+        <a href="about.html" data-nav="about">关于</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container page-head">
+      <h1>21天陪伴计划</h1>
+      <p class="lead">进度保存在本机浏览器中，换设备不会同步。建议配合<a href="tracker.html">护理日记</a>一起使用。</p>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="progress-wrap">
+          <p id="plan-progress-text">已完成 0 / 21 天（0%）</p>
+          <div class="progress-bar"><span id="plan-progress"></span></div>
+          <p><button class="btn btn-ghost" id="reset-plan" type="button">清空进度</button></p>
+        </div>
+        <div id="plan-root"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> 口腔溃疡21天陪伴式康复系统</p>
+      <p><a href="about.html">关于本站</a> · <a href="wiki.html">健康百科</a> · <a href="plan.html">康复计划</a></p>
+      <p class="disclaimer">本站内容仅供健康科普参考，不能替代专业医疗诊断。如有严重症状或持续不愈，请及时就医。</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/plan.js"></script>
+</body>
+</html>

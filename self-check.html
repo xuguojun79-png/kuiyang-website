@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>症状自查｜口腔溃疡陪伴式康复系统</title>
+  <meta name="description" content="6道选择题帮助你了解当前口腔溃疡的影响程度，结果仅供科普参考，不能作为诊断。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="check">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">愈</span>愈口 21天陪伴</a>
+      <button class="nav-toggle" type="button" aria-expanded="false">菜单</button>
+      <nav class="site-nav">
+        <a href="index.html" data-nav="home">首页</a>
+        <a href="plan.html" data-nav="plan">21天计划</a>
+        <a href="self-check.html" data-nav="check">自查</a>
+        <a href="tracker.html" data-nav="tracker">日记</a>
+        <a href="report.html" data-nav="report">周报</a>
+        <a href="wiki.html" data-nav="wiki">百科</a>
+        <a href="diet.html" data-nav="diet">饮食</a>
+        <a href="community.html" data-nav="community">社区</a>
+        <a href="about.html" data-nav="about">关于</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container page-head">
+      <h1>口腔溃疡自查</h1>
+      <p class="lead">大约2分钟。结果用于提醒护理重点，不能替代医生判断。</p>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <div id="screen-intro" class="quiz-screen active">
+            <h2>开始前请了解</h2>
+            <p>请按最近一次发作的真实情况作答。如果出现高热、吞咽困难、溃疡超过两周不愈、体重明显下降，请直接就医，不必等待自查结果。</p>
+            <button class="btn btn-primary" id="start-btn" type="button">开始答题</button>
+          </div>
+          <div id="screen-quiz" class="quiz-screen">
+            <p id="question-title"></p>
+            <h2 id="question-text"></h2>
+            <div id="options" class="options"></div>
+            <p><button class="btn btn-primary" id="next-btn" type="button">下一题</button></p>
+          </div>
+          <div id="screen-result" class="quiz-screen">
+            <div class="result-box">
+              <h2 id="result-title"></h2>
+              <p id="result-desc"></p>
+              <div class="btn-row" style="justify-content:center">
+                <a class="btn btn-primary" href="plan.html">查看21天计划</a>
+                <a class="btn btn-ghost" href="diet.html">看饮食建议</a>
+                <button class="btn btn-ghost" id="retry-btn" type="button">再测一次</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> 口腔溃疡21天陪伴式康复系统</p>
+      <p><a href="about.html">关于本站</a> · <a href="wiki.html">健康百科</a> · <a href="plan.html">康复计划</a></p>
+      <p class="disclaimer">本站内容仅供健康科普参考，不能替代专业医疗诊断。如有严重症状或持续不愈，请及时就医。</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/self-check.js"></script>
+</body>
+</html>

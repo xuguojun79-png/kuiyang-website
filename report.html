@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>护理周报｜口腔溃疡陪伴式康复系统</title>
+  <meta name="description" content="根据护理日记计算疼痛、睡眠和压力的平均数，并给出近期趋势提示。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="report">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">愈</span>愈口 21天陪伴</a>
+      <button class="nav-toggle" type="button" aria-expanded="false">菜单</button>
+      <nav class="site-nav">
+        <a href="index.html" data-nav="home">首页</a>
+        <a href="plan.html" data-nav="plan">21天计划</a>
+        <a href="self-check.html" data-nav="check">自查</a>
+        <a href="tracker.html" data-nav="tracker">日记</a>
+        <a href="report.html" data-nav="report">周报</a>
+        <a href="wiki.html" data-nav="wiki">百科</a>
+        <a href="diet.html" data-nav="diet">饮食</a>
+        <a href="community.html" data-nav="community">社区</a>
+        <a href="about.html" data-nav="about">关于</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container page-head">
+      <h1>护理周报</h1>
+      <p class="lead">自动读取本机日记数据。记录越多，趋势越有参考价值。</p>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div id="report-empty" class="card">
+          <h2>还没有可统计的日记</h2>
+          <p>请先到<a href="tracker.html">护理日记</a>添加至少一条记录。</p>
+        </div>
+        <div id="report-content" class="hidden">
+          <p id="range-text" class="lead"></p>
+          <div class="stat-grid">
+            <div class="stat"><span>平均疼痛</span><strong id="avg-pain">-</strong></div>
+            <div class="stat"><span>平均睡眠</span><strong id="avg-sleep">-</strong></div>
+            <div class="stat"><span>平均压力</span><strong id="avg-stress">-</strong></div>
+          </div>
+          <p class="lead">共 <strong id="count-log">0</strong> 条记录</p>
+          <div class="grid grid-3" style="margin-top:16px">
+            <article class="card"><h3>疼痛趋势</h3><p id="trend-pain"></p></article>
+            <article class="card"><h3>睡眠趋势</h3><p id="trend-sleep"></p></article>
+            <article class="card"><h3>压力趋势</h3><p id="trend-stress"></p></article>
+          </div>
+          <p style="margin-top:20px"><a class="btn btn-primary" href="plan.html">回到计划继续打卡</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> 口腔溃疡21天陪伴式康复系统</p>
+      <p><a href="about.html">关于本站</a> · <a href="wiki.html">健康百科</a> · <a href="plan.html">康复计划</a></p>
+      <p class="disclaimer">本站内容仅供健康科普参考，不能替代专业医疗诊断。如有严重症状或持续不愈，请及时就医。</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/report.js"></script>
+</body>
+</html>
